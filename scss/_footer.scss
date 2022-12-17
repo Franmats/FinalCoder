@@ -1,0 +1,18 @@
+
+footer {
+    background-color: black;
+    text-align: center; 
+    .redes {
+        text-decoration: none;
+        color: white;
+        font-style: normal;
+        font-family: $texto ;
+        transition: all 0.25s;
+        &:hover{
+            color: black;
+            background-color: white;
+            border-radius: 5px;
+        }
+    }       
+}
+
