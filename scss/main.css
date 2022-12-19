@@ -405,7 +405,7 @@ footer .redes:hover {
 /* MAIN GALERIA */
 #mainGaleria {
   padding: 20px;
-  background-color: black;
+  background-image: url(../images/bgblack.jpg);
 }
 #mainGaleria .galH1 {
   padding: 5px;
@@ -424,7 +424,29 @@ footer .redes:hover {
   gap: 10px;
   justify-content: space-around;
 }
+#mainGaleria .flexGale .itemGal {
+  width: 450px;
+  height: 300px;
+  overflow: hidden; /* sacandolo se hace para arriba */
+}
+#mainGaleria .flexGale .itemGal img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#mainGaleria .flexGale .itemGal img:hover {
+  transform: scale(1.2);
+}
 
+@media (max-width: 768px) {
+  #mainGaleria .flexGale .itemGal {
+    width: auto;
+    height: auto;
+  }
+}
 /* MAIN CONTACTO */
 #mainContact {
   padding: 20px;

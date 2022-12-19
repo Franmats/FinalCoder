@@ -296,15 +296,37 @@ $desktop: 1200px;
 
 #mainGaleria {
     padding: 20px;
-    background-color: black;
-    & .galH1{
+    background-image: url(../images/bgblack.jpg);
+    & .galH1 {
         @include hone;
     }
-    & .flexGale{
+    & .flexGale {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
         justify-content: space-around;
+        .itemGal {
+            width: 450px;
+            height: 300px;
+            overflow: hidden;/* sacandolo se hace para arriba */
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 10px;
+                transition: 0.5s;
+                object-fit: cover;
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    #mainGaleria .flexGale .itemGal {
+        width: auto;
+        height: auto;
     }
 }
 
