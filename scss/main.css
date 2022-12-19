@@ -117,140 +117,92 @@ footer .redes:hover {
   border-radius: 10px;
   text-align: center;
 }
-#main .main-flex1 .imagen-flex1, #main .main-flex2 .imagen-flex2 {
-  width: 700px;
+#main .flexX {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 5px;
+  margin-left: 15%;
+  margin-right: 15%;
+  max-width: 1200px;
+}
+#main .flexX .imagen-flex {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 470px;
   height: 500px;
   padding: 15px;
+  border-radius: 70px;
+  overflow: hidden;
 }
-#main .main-flex1 .imagen-flex1 img, #main .main-flex2 .imagen-flex2 img {
+#main .flexX .imagen-flex img {
   width: 100%;
   height: 100%;
   border-radius: 120px;
+  transition: 0.5s;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-#main .main-flex1 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  margin-bottom: 20px;
-  background-color: black;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 30px;
+#main .flexX .imagen-flex img:hover {
+  opacity: 70%;
 }
-#main .main-flex1 .grid1 {
-  width: 600px;
-  height: 400px;
-  display: grid;
-  background-color: brown;
-  grid-template-rows: 1fr 1fr 1fr;
-  border-radius: 20px;
-}
-#main .main-flex1 .grid1 .celda1 {
+#main .flexX .imagen-flex .mainText .celda1 {
+  border: 1px solid white;
+  border-radius: 10px;
   font-family: "Jost", sans-serif;
   text-align: center;
-  padding: 20px;
   margin: 5px;
-  font-size: 40px;
-}
-#main .main-flex1 .grid1 .celda2 {
-  font-family: "Jost", sans-serif;
-  text-align: center;
-  padding: 20px;
-  margin: 5px;
+  color: white;
   font-size: 20px;
 }
-#main .main-flex1 .grid1 .celda3 {
+#main .flexX .imagen-flex .mainText .celda2 {
   font-family: "Jost", sans-serif;
   text-align: center;
-  padding: 20px;
   margin: 5px;
-  font-size: 30px;
+  color: white;
+  font-size: 15px;
 }
-#main .main-flex2 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  margin-bottom: 20px;
-  background-color: black;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 30px;
-}
-#main .main-flex2 .imagen-flex2 {
-  order: 2;
-}
-#main .main-flex2 .grid2 {
-  width: 600px;
-  height: 400px;
-  display: grid;
-  background-color: brown;
-  grid-template-rows: 1fr 1fr 1fr;
-  border-radius: 20px;
-  order: 1;
-}
-#main .main-flex2 .grid2 .celda01 {
+#main .flexX .imagen-flex .mainText .celda3 {
   font-family: "Jost", sans-serif;
   text-align: center;
-  padding: 20px;
   margin: 5px;
-  font-size: 40px;
+  color: white;
+  font-size: 25px;
 }
-#main .main-flex2 .grid2 .celda02 {
-  font-family: "Jost", sans-serif;
-  text-align: center;
-  padding: 20px;
-  margin: 5px;
-  font-size: 20px;
-}
-#main .main-flex2 .grid2 .celda03 {
-  font-family: "Jost", sans-serif;
-  text-align: center;
-  padding: 20px;
-  margin: 5px;
-  font-size: 30px;
-}
-
-.mobileItem {
+#main .flexX .imagen-flex .mobileItem {
   display: none;
 }
-.mobileItem .div {
+#main .flexX .imagen-flex .mobileItem .div {
   display: none;
 }
 
 @media screen and (max-width: 768px) {
-  #main .main-flex1 {
-    border-bottom: 5px solid white;
-    border-radius: 0px;
+  #main .flexX {
+    margin: auto;
   }
-  #main .main-flex1 .imagen-flex1 {
+  #main .flexX .main-flex .imagen-flex {
+    border-radius: 30px;
     width: auto;
     height: auto;
-    padding: 15px;
   }
-  #main .main-flex1 .grid1 {
+  #main .flexX .main-flex .imagen-flex .mainText {
     display: none;
   }
-  #main .main-flex2 {
-    flex-direction: column-reverse;
-    border-bottom: 5px solid white;
-    border-radius: 0px;
-  }
-  #main .main-flex2 .imagen-flex2 {
-    width: auto;
-    height: auto;
-    padding: 15px;
-  }
-  #main .main-flex2 .grid2 {
-    display: none;
-  }
-  .mobileItem {
+  #main .flexX .main-flex .imagen-flex .mobileItem {
     display: block;
     color: white;
     font-family: "Jost", sans-serif;
     text-align: center;
   }
-  .mobileItem div {
+  #main .flexX .main-flex .imagen-flex .mobileItem b {
+    margin-top: 10px;
+    border-radius: 10px;
     display: block;
+    border: 1px solid white;
+  }
+  #main .flexX .main-flex .imagen-flex .mobileItem div {
     color: white;
     font-family: "Jost", sans-serif;
     text-align: center;
@@ -392,8 +344,8 @@ footer .redes:hover {
 #mainTestimonios form {
   font-family: "Jost", sans-serif;
   text-align: center;
-  padding: 20px;
   margin: 5px;
+  color: white;
   color: white;
   font-size: 20px;
   display: flex;

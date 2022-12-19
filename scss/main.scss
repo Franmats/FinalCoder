@@ -35,8 +35,8 @@ $desktop: 1200px;
 @mixin prop {
     font-family: $texto;
     text-align: center;
-    padding: 20px;
     margin: 5px;
+    color: white;
 }
 
 @mixin hone {
@@ -65,105 +65,97 @@ $desktop: 1200px;
     & h1 {
         @include hone;
     }
-    .main-flex1 .imagen-flex1, .main-flex2 .imagen-flex2{
-        width: 700px;
-        height: 500px;
-        padding: 15px;
-    }
-    .main-flex1 .imagen-flex1 img, .main-flex2 .imagen-flex2 img{
-        width: 100%;
-        height: 100%;
-        border-radius: 120px; 
-    }
-    & .main-flex1 {
-        @include flx;
-        .grid1 {
-            @include grd;
-            .celda1{
-                @include prop;
-                font-size: 40px;
+    & .flexX {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: 5px;
+        margin-left:15%;
+        margin-right: 15%;
+        max-width: 1200px;
+        .imagen-flex{
+            display: flex;
+            flex-direction: column;
+            background-color: black;
+            width: 470px;
+            height: 500px;
+            padding: 15px;
+            border-radius: 70px;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 120px;
+                transition: 0.5s;
+                object-fit: cover;
+                &:hover {
+                    opacity: 70%;
+                }
+
             }
-            .celda2{
-                @include prop;
-                font-size: 20px;
+            .mainText {
+                .celda1 {
+                    border: 1px solid white;
+                    border-radius: 10px;
+                    @include prop;
+                    font-size: 20px;
+                }
+                .celda2 {
+                    @include prop;
+                    font-size: 15px;
+                }
+                .celda3 {
+                    @include prop;
+                    font-size: 25px;
+                }
             }
-            .celda3{
-                @include prop;
-                font-size: 30px;
+            .mobileItem {
+                display: none;
+                .div {
+                    display: none;
+                }
             }
         }
-    }
-    & .main-flex2 {
-        @include flx;
-        .imagen-flex2 {
-            order: 2;
-        }
-        .grid2{
-            @include grd;
-            order: 1;
-            .celda01 {
-                @include prop;
-                font-size: 40px;
-            } 
-            .celda02{
-                @include prop;
-                font-size: 20px;
-            } 
-            .celda03{
-                @include prop;
-                font-size: 30px;
-            }  
-        }
-    }      
+    }   
 }
 
-.mobileItem {
-    display: none;
-    .div {
-        display: none;
-    }
-}
+
 
 @media screen and (max-width:768px) {   
     #main {
-        & .main-flex1{ 
-            border-bottom:5px solid white ;
-            border-radius: 0px;
-            .imagen-flex1{
-                width: auto;
-                height: auto;
-                padding: 15px;
-            }
-            .grid1{
-                display: none;
-            }
-        }
-        & .main-flex2 {
-            flex-direction: column-reverse;
-            border-bottom:5px solid white ;
-            border-radius: 0px;
-            .imagen-flex2{
-                width: auto;
-                height: auto;
-                padding: 15px;
-            }
-            .grid2{
-                display: none;
+        & .flexX { 
+            margin: auto;
+            & .main-flex {
+                .imagen-flex{
+                    border-radius: 30px;
+                    width: auto;
+                    height: auto;
+                    .mainText{
+                        display: none;
+                    }
+                    .mobileItem {
+                        display: block;
+                        color: white;
+                        font-family:$texto; 
+                        text-align: center;
+                        b {
+                            margin-top: 10px ;
+                            border-radius: 10px;
+                            display: block;
+                            border: 1px solid white;
+                        }
+                        div {
+                            color: white;
+                            font-family:$texto; 
+                            text-align: center;
+                        }
+                    }
+                }
             }
         }    
     } 
-    .mobileItem {
-        display: block;
-        color: white;
-        font-family:$texto; 
-        text-align: center;
-        div{
-            display: block;
-            color: white;
-            font-family:$texto; 
-            text-align: center;
-        }
-    }
+
 }
 
 /* MAIN PROMOCIONES */
