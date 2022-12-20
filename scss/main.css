@@ -88,14 +88,14 @@ footer {
   background-color: black;
   text-align: center;
 }
-footer .redes {
+footer div .redes {
   text-decoration: none;
   color: white;
   font-style: normal;
   font-family: "Jost", sans-serif;
   transition: all 0.25s;
 }
-footer .redes:hover {
+footer div .redes:hover {
   color: black;
   background-color: white;
   border-radius: 5px;
